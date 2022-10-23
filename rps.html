@@ -1,26 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="rps.css">
-    <script src="rps.js" defer></script>
+    <script type="text/javascript" src="rps.js" defer></script>
+    <script src="https://unpkg.com/freezeframe/dist/freezeframe.min.js" defer></script>
+
 </head>
 
 <body>
-    <section>
-        <header>
-            <div class="computerScore scores">0</div>
-            <img src="rps.gif">
-            <div class="playerScore scores">0</div>
-        </header>
-    </section>
+    <header>
+        <h1>The Rock, Paper, Scissors Game</h1>
+        <p>You are welcome to play at your own risk!</p>
+    </header>
 
-    <section>
-        <button>Rock</button>
-        <button>Paper</button>
-        <button>Scissors</button>
+    <section class="container">
+
+        <h2>GAMEPLAY</h2>
+        <img class="freezeframe" src="rps.gif" alt="rock paper scissors gif">
+
+        <div class="buttons">
+            <button class="rock"> Rock</button>
+            <button class="paper">Paper</button>
+            <button class="scissors"> Scissors</button>
+        </div>
+
     </section>
 </body>
 
