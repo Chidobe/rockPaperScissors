@@ -1,10 +1,17 @@
 //the choices available to pick
 
 const choices = ["rock", "paper", "scissors"];
+
 let computerChoice;
 let userChoice;
-let userScore = 0;
-let computerScore = 0;
+
+let gameStatus = document.querySelector('.gameStatus')
+
+let userScore = document.querySelector('.userScore');
+userScore.textContent = 0;
+
+let computerScore = document.querySelector('.computerScore');
+computerScore.textContent = 0;
 
 const buttons = document.querySelectorAll('button');
 
@@ -15,15 +22,17 @@ buttons.forEach(btn => {
         computerChoice = choices[Math.floor(Math.random() * choices.length)];
 
         if (userChoice === computerChoice) {
-            alert("its a tie")
+            gameStatus.textContent = ("Its a tie!")
         } else if ((userChoice === "rock" && computerChoice === "scissors") || (userChoice === "scissors" && computerChoice === "paper") || (userChoice === "paper" && computerChoice === "rock")) {
-            alert("you win")
-            
+            gameStatus.textContent = (`You win, ${userChoice} beats ${computerChoice}!`)
+            userScore.textContent = ++(userScore.textContent);
+
         } else {
-            alert('you lose')
+            gameStatus.textContent = (`You lose ${computerChoice} beats ${userChoice}!`)
+            computerScore.textContent = ++(computerScore.textContent);
         };
 
-
     });
+
 });
 
